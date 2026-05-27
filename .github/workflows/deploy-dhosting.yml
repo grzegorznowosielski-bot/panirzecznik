@@ -13,10 +13,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.DHOST_FTP_HOST }}
           username: ${{ secrets.DHOST_FTP_USER }}
           password: ${{ secrets.DHOST_FTP_PASS }}
           server-dir: ${{ secrets.DHOST_FTP_PATH }}
+          protocol: ftps
+          port: 21
+          timeout: 120000
           dangerous-clean-slate: false
