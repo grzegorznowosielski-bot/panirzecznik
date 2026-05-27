@@ -19,7 +19,6 @@ jobs:
           username: ${{ secrets.DHOST_FTP_USER }}
           password: ${{ secrets.DHOST_FTP_PASS }}
           server-dir: ${{ secrets.DHOST_FTP_PATH }}
-          protocol: ftps
           port: 21
-          timeout: 120000
+          timeout: 300000
           dangerous-clean-slate: false
