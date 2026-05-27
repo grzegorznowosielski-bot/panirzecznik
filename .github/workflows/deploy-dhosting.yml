@@ -1,0 +1,22 @@
+name: Deploy to dhosting
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.DHOST_FTP_HOST }}
+          username: ${{ secrets.DHOST_FTP_USER }}
+          password: ${{ secrets.DHOST_FTP_PASS }}
+          server-dir: ${{ secrets.DHOST_FTP_PATH }}
+          dangerous-clean-slate: false
