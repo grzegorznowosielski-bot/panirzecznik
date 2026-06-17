@@ -32,20 +32,15 @@ $name = sanitize_text($_POST['name'] ?? '');
 $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
 $phone = sanitize_text($_POST['phone'] ?? '');
 $business = sanitize_multiline($_POST['business'] ?? '');
-$stage = sanitize_text($_POST['stage'] ?? '');
 $challenge = sanitize_multiline($_POST['challenge'] ?? '');
 $outcome = sanitize_multiline($_POST['outcome'] ?? '');
-$investment = sanitize_text($_POST['investment'] ?? '');
-$whyNow = sanitize_multiline($_POST['why-now'] ?? '');
 
 if (
     $name === '' ||
     $email === false ||
     $business === '' ||
-    $stage === '' ||
     $challenge === '' ||
-    $outcome === '' ||
-    $investment === ''
+    $outcome === ''
 ) {
     http_response_code(422);
     echo json_encode([
@@ -65,21 +60,14 @@ $messageLines = [
     'E-mail: ' . $email,
     'Telefon: ' . ($phone !== '' ? $phone : 'Brak'),
     '',
-    'Czym zajmuje się marka:',
+    'Czym się zajmuje:',
     $business,
     '',
-    'Etap video: ' . $stage,
-    '',
-    'Największa trudność:',
+    'Największy problem:',
     $challenge,
     '',
-    'Pożądany efekt:',
+    'Co chce osiągnąć:',
     $outcome,
-    '',
-    'Gotowość inwestycyjna: ' . $investment,
-    '',
-    'Dlaczego teraz:',
-    $whyNow !== '' ? $whyNow : 'Nie podano',
     '',
     'Data: ' . date('Y-m-d H:i:s'),
     'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'nieznane'),
@@ -103,11 +91,8 @@ $csvRow = [
     $email,
     $phone,
     $business,
-    $stage,
     $challenge,
     $outcome,
-    $investment,
-    $whyNow,
     $_SERVER['REMOTE_ADDR'] ?? ''
 ];
 

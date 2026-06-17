@@ -168,9 +168,8 @@
         </button>
         <h3 id="form-title">Zgłoś się na bezpłatną konsultację</h3>
         <p class="form-intro">
-          Wypełnij krótki formularz, a sprawdzimy, czy ten format pracy będzie
-          najlepszym rozwiązaniem dla Twojej marki. Odpowiadam osobiście na każde
-          zgłoszenie.
+          Zostaw kilka podstawowych informacji — sprawdzę, czy ten format pracy
+          pasuje do Twojej marki. Odpowiadam osobiście na każde zgłoszenie.
         </p>
         <form class="premium-form" id="lead-form" method="post" action="./submit.php">
           <input
@@ -210,57 +209,31 @@
             autocomplete="tel"
           />
 
-          <label for="business">Czym zajmujesz się zawodowo i jaką markę budujesz?</label>
+          <label for="business">Czym się zajmujesz?</label>
           <textarea
             id="business"
             name="business"
-            rows="4"
+            rows="3"
             required
-            placeholder="Napisz krótko, czym się zajmujesz i do kogo kierujesz swoją ofertę. Jeśli prowadzisz profil w social mediach - podaj jego nazwę."
+            placeholder="Napisz krótko, czym się zajmujesz i do kogo kierujesz swoją ofertę."
           ></textarea>
 
-          <fieldset>
-            <legend>Na jakim etapie jesteś dziś z publikacją video?</legend>
-            <label class="choice"><input type="radio" name="stage" value="not-yet" required /> jeszcze nie nagrywam</label>
-            <label class="choice"><input type="radio" name="stage" value="blocked" /> próbuję, ale kamera mnie blokuje</label>
-            <label class="choice"><input type="radio" name="stage" value="unsatisfied" /> nagrywam, ale nie do końca jestem zadowolona z efektów</label>
-            <label class="choice"><input type="radio" name="stage" value="regular-plus" /> publikuję regularnie, ale chcę wejść poziom wyżej</label>
-          </fieldset>
-
-          <label for="challenge">Co jest dziś dla Ciebie największą trudnością?</label>
+          <label for="challenge">Jaki jest Twój największy problem?</label>
           <textarea
             id="challenge"
             name="challenge"
-            rows="4"
+            rows="3"
             required
-            placeholder="np. stres przed kamerą, brak naturalności, technikalia, brak pomysłu na content"
+            placeholder="np. stres przed kamerą, brak naturalności, brak pomysłu na content"
           ></textarea>
 
-          <label for="outcome">Co chciałabyś osiągnąć dzięki tej współpracy?</label>
+          <label for="outcome">Co chcesz osiągnąć?</label>
           <textarea
             id="outcome"
             name="outcome"
-            rows="4"
+            rows="3"
             required
             placeholder="np. regularne rolki, profesjonalny video podcast, większa widoczność marki"
-          ></textarea>
-
-          <fieldset>
-            <legend>
-              Czy jesteś gotowa zainwestować w profesjonalny proces nagrania i
-              strategii contentowej, jeśli uznamy, że to najlepsze rozwiązanie dla Ciebie?
-            </legend>
-            <label class="choice"><input type="radio" name="investment" value="ready" required /> tak, jestem gotowa</label>
-            <label class="choice"><input type="radio" name="investment" value="details" /> chcę najpierw poznać szczegóły</label>
-            <label class="choice"><input type="radio" name="investment" value="exploring" /> na ten moment jeszcze się orientuję</label>
-          </fieldset>
-
-          <label for="why-now">Dlaczego czujesz, że to jest dla Ciebie ważne właśnie teraz?</label>
-          <textarea
-            id="why-now"
-            name="why-now"
-            rows="4"
-            placeholder="opcjonalnie"
           ></textarea>
 
           <button type="submit" class="btn" id="submit-btn">Wyślij zgłoszenie</button>
