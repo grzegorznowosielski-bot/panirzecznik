@@ -63,7 +63,7 @@ $messageLines = [
     'Czym się zajmuje:',
     $business,
     '',
-    'Największy problem:',
+    'Największy problem z nagraniami:',
     $challenge,
     '',
     'Co chce osiągnąć:',
