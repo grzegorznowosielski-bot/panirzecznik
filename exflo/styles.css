@@ -460,17 +460,24 @@
 
 .exflo-usage__seg--blue {
   background: #599ce7;
-  width: 34.78%;
+  width: 33.33%;
 }
 
 .exflo-usage__seg--purple {
   background: #9386f2;
-  width: 43.48%;
+  width: 41.67%;
 }
 
 .exflo-usage__seg--green {
   background: #3fa266;
-  width: 21.74%;
+  width: 25%;
+}
+
+.exflo-subtitle {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
 }
 
 .exflo-legend {
