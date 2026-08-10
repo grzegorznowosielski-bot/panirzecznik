@@ -798,9 +798,61 @@
   color: var(--muted);
 }
 
-.exflo-cta-note {
+.exflo-closing {
+  text-align: center;
+  border: 1px solid rgba(255, 79, 154, 0.22);
+  border-left: 4px solid var(--pink);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 79, 154, 0.1), transparent 42%),
+    linear-gradient(160deg, #fff8fb 0%, #ffffff 58%, #fdf6fa 100%);
+  padding: 2.1rem 1.35rem 1.85rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.exflo-closing__kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #c83278;
+  margin-bottom: 0.85rem;
+}
+
+.exflo-closing__quote {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: clamp(1.2rem, 2.8vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  max-width: 26rem;
+  margin: 0 auto;
+}
+
+.exflo-closing__sub {
+  margin: 1rem auto 0;
+  max-width: 30rem;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+.exflo-closing__sig {
+  margin-top: 1.35rem;
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--muted);
+}
+
+.exflo-closing__sig a {
+  color: #742848;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(116, 40, 72, 0.25);
+}
+
+.exflo-closing__sig a:hover {
+  color: #c83278;
+  border-color: rgba(255, 79, 154, 0.35);
 }
 
 .exflo-footer {
