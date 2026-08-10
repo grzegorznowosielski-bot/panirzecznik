@@ -667,6 +667,18 @@
   flex-shrink: 0;
 }
 
+.exflo-list--dense {
+  gap: 0.35rem;
+}
+
+.exflo-list--dense li {
+  font-size: 0.85rem;
+}
+
+.exflo-list--dense li::before {
+  margin-top: 0.45rem;
+}
+
 .exflo-timeline {
   display: grid;
   gap: 0;
