@@ -378,205 +378,147 @@
   max-width: 52rem;
 }
 
-.exflo-block-grid {
+.exflo-page .exflo-card-grid {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.6rem;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (min-width: 640px) {
-  .exflo-block-grid {
+  .exflo-page .exflo-card-grid--2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-.exflo-block {
-  display: grid;
-  grid-template-columns: 1.35rem minmax(0, 1fr);
-  gap: 0.65rem;
-  align-items: start;
-  padding: 0.8rem 0.9rem;
+@media (min-width: 720px) {
+  .exflo-page .exflo-card-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.exflo-page .exflo-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
   border-radius: 12px;
   border: 1px solid var(--line);
-  background: #fdfdfd;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
 }
 
-.exflo-block__num {
-  font-family: "Manrope", "Inter", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1.35;
-  padding-top: 0.08rem;
-  color: #599ce7;
+.exflo-page .exflo-card--compact {
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.8rem 0.95rem;
 }
 
-.exflo-block--blue {
-  border-left: 3px solid #599ce7;
+.exflo-page .exflo-card--compact:not(:has(.exflo-card__badge)) {
+  padding-top: 0.85rem;
 }
 
-.exflo-block--blue .exflo-block__num {
-  color: #599ce7;
+.exflo-page .exflo-card--compact:has(.exflo-card__badge),
+.exflo-page .exflo-card--row {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.exflo-block--purple {
-  border-left: 3px solid #9386f2;
-}
-
-.exflo-block--purple .exflo-block__num {
-  color: #9386f2;
-}
-
-.exflo-block--pink {
-  border-left: 3px solid var(--pink);
-}
-
-.exflo-block--pink .exflo-block__num {
-  color: var(--pink);
-}
-
-.exflo-block--green {
-  border-left: 3px solid #3fa266;
-  background: #f8fdf9;
-}
-
-.exflo-block--green .exflo-block__num {
-  color: #3fa266;
-}
-
-.exflo-block__content {
-  min-width: 0;
-}
-
-.exflo-block__title {
-  margin: 0;
-  font-family: "Manrope", "Inter", sans-serif;
-  font-size: 0.92rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #1a1a1a;
-  text-wrap: balance;
-}
-
-.exflo-block__title--quote {
-  font-style: italic;
-  font-weight: 800;
-}
-
-.exflo-block__hint {
-  margin: 0.18rem 0 0;
-  font-size: 0.82rem;
-  line-height: 1.4;
-  color: #666;
-}
-
-.exflo-question-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 0.55rem;
-  counter-reset: exflo-q;
-}
-
-.exflo-question-list li {
-  counter-increment: exflo-q;
-  display: grid;
-  grid-template-columns: 1.35rem minmax(0, 1fr);
-  gap: 0.65rem;
-  align-items: start;
-  padding: 0.8rem 0.9rem;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  border-left: 3px solid #9386f2;
-  background: #fdfdfd;
-  font-size: 0.92rem;
-  line-height: 1.45;
-  color: #333;
-}
-
-.exflo-question-list li::before {
-  content: counter(exflo-q);
-  width: auto;
-  height: auto;
-  border-radius: 0;
+.exflo-page .exflo-card--optional {
   display: block;
-  font-family: "Manrope", "Inter", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: #9386f2;
-  background: none;
-  margin-top: 0.08rem;
-}
-
-.exflo-question-optional {
-  margin: 0.55rem 0 0;
-  padding: 0.75rem 0.9rem;
-  border-radius: 12px;
-  border: 1px dashed rgba(147, 134, 242, 0.4);
+  margin: 0.6rem 0 0;
+  border-style: dashed;
+  border-color: rgba(147, 134, 242, 0.42);
   background: #faf9ff;
   font-size: 0.88rem;
   line-height: 1.5;
   color: #555;
 }
 
-.exflo-role-grid {
+.exflo-page .exflo-card__badge {
+  flex-shrink: 0;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 8px;
   display: grid;
-  gap: 0.55rem;
+  place-items: center;
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fff;
+  background: #599ce7;
 }
 
-@media (min-width: 640px) {
-  .exflo-role-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.exflo-page .exflo-card__body {
+  flex: 1;
+  min-width: 0;
 }
 
-@media (min-width: 960px) {
-  .exflo-role-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.exflo-role {
-  padding: 0.85rem 0.95rem;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: #fdfdfd;
-}
-
-.exflo-role--blue {
-  border-left: 3px solid #599ce7;
-}
-
-.exflo-role--purple {
-  border-left: 3px solid #9386f2;
-}
-
-.exflo-role--green {
-  border-left: 3px solid #3fa266;
-}
-
-.exflo-role--amber {
-  border-left: 3px solid #f1b467;
-}
-
-.exflo-role--rose {
-  border-left: 3px solid #d08770;
-}
-
-.exflo-role__dept {
+.exflo-page .exflo-card__title {
   margin: 0;
   font-family: "Manrope", "Inter", sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.4;
   color: #1a1a1a;
+  text-wrap: balance;
 }
 
-.exflo-role__focus {
-  margin: 0.2rem 0 0;
+.exflo-page .exflo-card--compact > .exflo-card__title {
+  flex: 1;
+  min-width: 0;
+}
+
+.exflo-page .exflo-card__title--quote {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.exflo-page .exflo-card__meta {
+  margin: 0.15rem 0 0;
   font-size: 0.82rem;
   line-height: 1.4;
   color: #666;
-  text-wrap: balance;
+}
+
+.exflo-page .exflo-card--blue {
+  border-left: 3px solid #599ce7;
+}
+
+.exflo-page .exflo-card--blue .exflo-card__badge {
+  background: #599ce7;
+}
+
+.exflo-page .exflo-card--purple {
+  border-left: 3px solid #9386f2;
+}
+
+.exflo-page .exflo-card--purple .exflo-card__badge {
+  background: #9386f2;
+}
+
+.exflo-page .exflo-card--pink {
+  border-left: 3px solid var(--pink);
+}
+
+.exflo-page .exflo-card--pink .exflo-card__badge {
+  background: var(--pink);
+}
+
+.exflo-page .exflo-card--green {
+  border-left: 3px solid #3fa266;
+}
+
+.exflo-page .exflo-card--green .exflo-card__badge {
+  background: #3fa266;
+}
+
+.exflo-page .exflo-card--amber {
+  border-left: 3px solid #f1b467;
+}
+
+.exflo-page .exflo-card--rose {
+  border-left: 3px solid #d08770;
 }
 
 .exflo-topic__num {
@@ -723,53 +665,6 @@
   background: var(--pink);
   margin-top: 0.55rem;
   flex-shrink: 0;
-}
-
-.exflo-place-grid {
-  display: grid;
-  gap: 0.55rem;
-}
-
-@media (min-width: 560px) {
-  .exflo-place-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 900px) {
-  .exflo-place-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.exflo-place {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.75rem 0.85rem;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: #fdfdfd;
-}
-
-.exflo-place__num {
-  width: 1.65rem;
-  height: 1.65rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  font-family: "Manrope", "Inter", sans-serif;
-  font-size: 0.76rem;
-  font-weight: 800;
-  color: #fff;
-  background: #3fa266;
-}
-
-.exflo-place__text {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #333;
 }
 
 .exflo-timeline {
