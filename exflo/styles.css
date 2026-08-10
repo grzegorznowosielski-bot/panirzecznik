@@ -911,3 +911,64 @@
   width: 100%;
   text-align: left;
 }
+
+.exflo-price-packages {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .exflo-price-packages {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.exflo-price-package {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.2rem 1.15rem;
+  background: #fdfdfd;
+}
+
+.exflo-price-package--featured {
+  border-color: rgba(255, 79, 154, 0.35);
+  background: #fff8fb;
+}
+
+.exflo-price-package__name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.35rem;
+}
+
+.exflo-price-package--featured .exflo-price-package__name {
+  color: #c83278;
+}
+
+.exflo-price-package__amount {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.exflo-price-package__amount span {
+  font-size: 0.45em;
+  font-weight: 700;
+  color: #666;
+}
+
+.exflo-price-package__brutto {
+  font-size: 0.84rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0.85rem;
+}
+
+.exflo-price-package .exflo-list {
+  margin-top: 0.25rem;
+}
