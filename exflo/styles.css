@@ -6,6 +6,42 @@
   text-align: left;
 }
 
+/*
+ * Izolacja od ../styles.css — bez tego akapity w .content-section dostają
+ * width: min(100%, 36rem) + margin: auto, a listy/gridy zostają na pełnej
+ * szerokości → „rozjechany” układ (callouty, harmonogram, karty, closing).
+ */
+.exflo-page .content-section p,
+.exflo-page .hero p {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.exflo-page .content-section h2 {
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.exflo-page .content-section .section-intro {
+  color: #555;
+}
+
+.exflo-page .content-section .exflo-list {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+
+.exflo-page .exflo-format-box .exflo-format-box__text {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .exflo-header {
   display: flex;
   align-items: center;
@@ -133,20 +169,6 @@
   margin-bottom: 0.35rem;
 }
 
-.content-section h2 {
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
-}
-
-.content-section .section-intro {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  color: #555;
-}
-
 .exflo-callout {
   border-radius: 16px;
   padding: 1.15rem 1.2rem;
@@ -173,6 +195,27 @@
   font-family: "Manrope", "Inter", sans-serif;
   font-size: 1rem;
   margin-bottom: 0.45rem;
+}
+
+.exflo-callout__sub {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #444;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Nadpisanie globalnego centrowania akapitów w .content-section */
+.exflo-page .exflo-callout p,
+.exflo-page .exflo-callout h3,
+.exflo-page .exflo-callout h4,
+.exflo-page .exflo-callout .exflo-list,
+.exflo-page .exflo-callout .exflo-price-rows {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
 
 .exflo-callout p,
@@ -967,13 +1010,13 @@
 }
 
 .exflo-closing {
-  text-align: center;
+  text-align: left;
   border: 1px solid rgba(255, 79, 154, 0.22);
   border-left: 4px solid var(--pink);
   background:
     radial-gradient(circle at 88% 12%, rgba(255, 79, 154, 0.1), transparent 42%),
     linear-gradient(160deg, #fff8fb 0%, #ffffff 58%, #fdf6fa 100%);
-  padding: 2.1rem 1.35rem 1.85rem;
+  padding: 2rem 1.5rem 1.75rem;
   position: relative;
   overflow: hidden;
 }
@@ -989,27 +1032,36 @@
 
 .exflo-closing__quote {
   font-family: "Manrope", "Inter", sans-serif;
-  font-size: clamp(1.2rem, 2.8vw, 1.45rem);
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.55;
   letter-spacing: -0.02em;
   color: #1a1a1a;
-  max-width: 26rem;
-  margin: 0 auto;
+  max-width: 34rem;
+  margin: 0;
 }
 
 .exflo-closing__sub {
-  margin: 1rem auto 0;
-  max-width: 30rem;
+  margin: 1rem 0 0;
+  max-width: 34rem;
   font-size: 0.96rem;
   line-height: 1.55;
   color: #555;
 }
 
 .exflo-closing__sig {
-  margin-top: 1.35rem;
+  margin-top: 1.25rem;
   font-size: 0.88rem;
   color: var(--muted);
+}
+
+/* Nadpisanie globalnego centrowania w closing */
+.exflo-page .exflo-closing p {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
 
 .exflo-closing__sig a {
