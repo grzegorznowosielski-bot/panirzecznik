@@ -52,12 +52,20 @@
       .portrait-interview__placeholder { aspect-ratio: 16/9; border: 1px dashed #765b6e; background: rgba(255,255,255,.035); border-radius: 16px; margin-top: 1.8rem; display: grid; place-items: center; text-align: center; padding: 2rem; }
       .portrait-interview__placeholder span { display: block; color: #efbdd4; font-family: Manrope,Inter,sans-serif; font-size: clamp(1.1rem, 2.8vw, 1.7rem); font-weight: 700; }
       .portrait-interview__placeholder small { color: #b9a8b5; font-size: .85rem; display: block; margin-top: .65rem; }
+      .portrait-reels__lead { max-width: 640px; }
+      .portrait-reels__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.15rem; margin-top: 1.7rem; }
+      .portrait-reel { min-width: 0; }
+      .portrait-reel__frame { aspect-ratio: 9 / 16; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 1.2rem; gap: .8rem; border: 1px solid #e8d6e0; border-radius: 15px; background: linear-gradient(150deg, #3b2636, #1c1620 75%); color: #fff; text-align: center; }
+      .portrait-reel__no { color: #f4add0; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; font-size: .7rem; }
+      .portrait-reel__title { font: 800 clamp(1.1rem, 2.2vw, 1.5rem)/1.2 Manrope, Inter, sans-serif; }
+      .portrait-reel__note { color: #d8c2d0; font-size: .8rem; }
+      .portrait-reel figcaption { color: #655960; font-size: .86rem; padding: .65rem .1rem 0; }
       .portrait-follow { text-align: center; padding: 2.2rem; margin-top: 1.5rem; }
       .portrait-follow p { color: #555056; }
       .portrait-follow a { color: #a63268; font-weight: 700; text-decoration: none; }
       .portrait-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.7rem; padding: .4rem; color: #807a80; font-size: .8rem; }
       .portrait-footer a { color: #70666e; }
-      @media(max-width: 700px) { .portrait-split { grid-template-columns: 1fr; } .portrait-monogram { min-height: 210px; } }
+      @media(max-width: 700px) { .portrait-split { grid-template-columns: 1fr; } .portrait-monogram { min-height: 210px; } .portrait-reels__grid { grid-auto-flow: column; grid-auto-columns: minmax(185px, 65%); grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .6rem; } .portrait-reel { scroll-snap-align: start; } }
       @media(max-width: 480px) { .portrait-page { padding: 1rem .85rem 3rem; } .portrait-hero, .portrait-section { padding: 1.75rem 1.35rem; } .portrait-hero h1 { font-size: 3.15rem; } .portrait-meta { gap: .3rem; } .portrait-video { margin-top: 1.8rem; } .portrait-video::after { inset: .8rem; } }
     </style>
   </head>
@@ -110,6 +118,38 @@
           </div>
         </section>
       </article>
+
+      <section class="card portrait-section portrait-reels" id="rolki" aria-labelledby="rolki-title">
+        <span class="portrait-section__kicker">Z tej rozmowy</span>
+        <h2 id="rolki-title">Krótkie fragmenty</h2>
+        <p class="portrait-reels__lead">Po premierze znajdziesz tu rolki z wybranymi fragmentami wywiadu. Każda będzie prowadzić do naszej pełnej rozmowy z Monicą.</p>
+        <div class="portrait-reels__grid">
+          <figure class="portrait-reel">
+            <div class="portrait-reel__frame" aria-label="Miejsce na pierwszą rolkę">
+              <span class="portrait-reel__no">01 / ROLKA</span>
+              <span class="portrait-reel__title">Monica Nera</span>
+              <span class="portrait-reel__note">W przygotowaniu</span>
+            </div>
+            <figcaption>Fragment rozmowy 01</figcaption>
+          </figure>
+          <figure class="portrait-reel">
+            <div class="portrait-reel__frame" aria-label="Miejsce na drugą rolkę">
+              <span class="portrait-reel__no">02 / ROLKA</span>
+              <span class="portrait-reel__title">Monica Nera</span>
+              <span class="portrait-reel__note">W przygotowaniu</span>
+            </div>
+            <figcaption>Fragment rozmowy 02</figcaption>
+          </figure>
+          <figure class="portrait-reel">
+            <div class="portrait-reel__frame" aria-label="Miejsce na trzecią rolkę">
+              <span class="portrait-reel__no">03 / ROLKA</span>
+              <span class="portrait-reel__title">Monica Nera</span>
+              <span class="portrait-reel__note">W przygotowaniu</span>
+            </div>
+            <figcaption>Fragment rozmowy 03</figcaption>
+          </figure>
+        </div>
+      </section>
 
       <section class="card portrait-follow">
         <p>Chcesz poznać kolejne bohaterki? <a href="../#bohaterki">Wróć do galerii ekspertek ↗</a></p>
