@@ -690,3 +690,44 @@ body.modal-open {
     opacity: 0.08;
   }
 }
+
+
+/* Dyskretny link do cyklu Ekspertka w kadrze */
+.series-callout {
+  display: grid;
+  gap: .3rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid #f1d9e5;
+  box-shadow: var(--shadow-soft);
+  color: #19161a;
+  text-decoration: none;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+.series-callout:hover {
+  border-color: #ff4f9a;
+  transform: translateY(-2px);
+}
+.series-callout__eyebrow {
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #bb3b76;
+}
+.series-callout__title {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.22rem, 3vw, 1.55rem);
+  line-height: 1.32;
+  letter-spacing: -.025em;
+}
+.series-callout__title span {
+  color: #c74a84;
+}
+.series-callout__desc {
+  color: #625c61;
+  font-size: .9rem;
+  line-height: 1.6;
+}

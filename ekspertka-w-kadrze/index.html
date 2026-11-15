@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekspertka w kadrze | Pani Rzecznik</title>
+    <meta name="description" content="Ekspertka w kadrze to cykl rozmów Anny Nowosielskiej z kobietami z różnych branż. Poznaj format wywiadów wideo i zgłoś swoją historię." />
+    <link rel="canonical" href="https://panirzecznik.pl/ekspertka-w-kadrze/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content="Pani Rzecznik" />
+    <meta property="og:title" content="Ekspertka w kadrze | Pani Rzecznik" />
+    <meta property="og:description" content="Rozmowy z kobietami, które znają swój fach. O ich pracy, wyborach i historiach, których nie widać w zawodowym bio." />
+    <meta property="og:url" content="https://panirzecznik.pl/ekspertka-w-kadrze/" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .series-page { max-width: 920px; padding-top: 1.55rem; }
+      .series-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: .2rem .3rem 1.6rem; }
+      .series-brand { text-decoration: none; color: #1b1b1d; font-family: Manrope, Inter, sans-serif; font-size: 1rem; line-height: 1.25; letter-spacing: -.025em; font-weight: 800; }
+      .series-brand span { color: #ff4f9a; }
+      .series-back { font-size: .86rem; font-weight: 600; color: #56525a; text-decoration: none; border-bottom: 1px solid #ccc8cc; padding-bottom: .16rem; }
+      .series-back:hover { color: #a12b62; border-color: #ff4f9a; }
+      .series-hero { padding: clamp(2rem, 6vw, 4.2rem); text-align: left; display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; overflow: hidden; }
+      .series-hero__copy { display: grid; gap: 1.4rem; }
+      .series-hero .label { justify-content: flex-start; color: #685960; }
+      .series-hero .label::before { background: #ff4f9a; box-shadow: 0 0 0 4px rgba(255, 79, 154, .13); }
+      .series-hero h1 { text-align: left; font-size: clamp(2.8rem, 6.1vw, 4.65rem); letter-spacing: -.065em; line-height: 1.01; }
+      .series-hero h1 span { color: #c63372; }
+      .series-hero .series-lead { font-size: clamp(1.12rem, 2.1vw, 1.3rem); line-height: 1.55; font-weight: 600; color: #262126; }
+      .series-hero .series-intro { font-size: 1rem; color: #555057; line-height: 1.75; }
+      .series-hero .btn { display: inline-flex; justify-content: center; align-items: center; width: fit-content; min-width: 190px; padding: .85rem 1.45rem; background: #ff4f9a; border-color: #ff4f9a; color: #fff; box-shadow: 0 10px 24px rgba(255, 79, 154, .2); text-decoration: none; }
+      .series-hero .btn:hover { background: #e83281; color: #fff; }
+      .series-frame { position: relative; align-self: stretch; min-height: 360px; border-radius: 20px; background: linear-gradient(148deg, #f9e0ea 0%, #efc6d9 53%, #dda2c1 100%); display: flex; flex-direction: column; justify-content: space-between; padding: 1.7rem; overflow: hidden; }
+      .series-frame::before, .series-frame::after { content: ''; position: absolute; width: 86px; height: 86px; pointer-events: none; }
+      .series-frame::before { top: 1.25rem; left: 1.25rem; border-left: 3px solid #a73b73; border-top: 3px solid #a73b73; }
+      .series-frame::after { bottom: 1.25rem; right: 1.25rem; border-right: 3px solid #a73b73; border-bottom: 3px solid #a73b73; }
+      .series-frame__top { font-size: .7rem; font-weight: 700; letter-spacing: .14em; color: #773954; text-transform: uppercase; position: relative; z-index: 1; margin-left: .8rem; }
+      .series-frame__middle { font-family: Manrope, Inter, sans-serif; font-size: clamp(2.7rem, 4.4vw, 3.9rem); line-height: 1.1; font-weight: 800; letter-spacing: -.07em; color: #6a2348; align-self: center; text-align: center; position: relative; z-index: 1; }
+      .series-frame__middle em { font-style: normal; color: #fff; }
+      .series-frame__bottom { color: #793b5a; font-size: .8rem; letter-spacing: .08em; text-align: right; font-weight: 600; position: relative; z-index: 1; margin-right: .85rem; }
+      .series-section { margin-top: 1.55rem; padding: clamp(2rem, 5.5vw, 3.4rem); text-align: left; }
+      .series-section h2 { text-align: left; font-size: clamp(1.6rem, 3.3vw, 2.3rem); margin-bottom: 1.25rem; }
+      .series-section p { color: #3f3b3f; line-height: 1.78; }
+      .series-section p + p { margin-top: 1.2rem; }
+      .series-kicker { display: block; font-weight: 700; font-size: .72rem; text-transform: uppercase; letter-spacing: .13em; color: #bb3b76; margin-bottom: .7rem; }
+      .series-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.8rem; }
+      .series-step { background: #faf7f8; border: 1px solid #f2e5eb; padding: 1.45rem; border-radius: 16px; }
+      .series-step__no { color: #c74a84; font-size: .8rem; font-weight: 800; letter-spacing: .08em; }
+      .series-step h3 { font-family: Manrope, Inter, sans-serif; font-size: 1.04rem; line-height: 1.35; margin: .85rem 0 .6rem; }
+      .series-step p { font-size: .92rem; line-height: 1.65; color: #4e474b; }
+      .series-about { display: grid; grid-template-columns: 1fr 1fr; gap: 2.7rem; align-items: start; }
+      .series-about__aside { background: #f8f5f6; padding: 1.6rem; border-left: 3px solid #ff4f9a; border-radius: 0 12px 12px 0; }
+      .series-about__aside strong { display: block; margin-bottom: .7rem; font-size: .95rem; }
+      .series-about__aside p { font-size: .94rem; }
+      .series-outcome { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 1.65rem; }
+      .series-outcome > div { padding-top: 1rem; border-top: 2px solid #f1c6d9; }
+      .series-outcome h3 { margin-bottom: .5rem; font-size: 1rem; }
+      .series-outcome p { font-size: .94rem; }
+      .series-contact { background: linear-gradient(145deg, #18131b, #282029); color: #fff; border-color: #2b242d; }
+      .series-contact h2, .series-contact p { color: #fff; }
+      .series-contact p { color: #e6dce2; max-width: 38rem; }
+      .series-contact a.btn { display: inline-block; width: auto; min-width: 250px; background: #ff4f9a; border-color: #ff4f9a; color: #fff; text-decoration: none; text-align: center; margin-top: 1.45rem; }
+      .series-contact a.btn:hover { background: #f73b8c; color: #fff; }
+      .series-note { font-size: .8rem; color: #c9b9c3 !important; margin-top: .65rem !important; }
+      .series-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 1.6rem .3rem 0; color: #79747a; font-size: .8rem; }
+      .series-footer a { color: #615762; }
+      @media(max-width: 720px) { .series-hero { grid-template-columns: 1fr; } .series-frame { min-height: 250px; } .series-steps, .series-outcome { grid-template-columns: 1fr; } .series-about { grid-template-columns: 1fr; gap: 1.4rem; } }
+      @media(max-width: 480px) { .series-page { padding: 1rem .8rem 3rem; } .series-header { padding: 0 .25rem 1rem; } .series-back { font-size: .76rem; } .series-hero, .series-section { padding: 1.65rem 1.3rem; } .series-hero h1 { font-size: 2.9rem; } .series-frame__middle { font-size: 2.8rem; } .series-contact a.btn { display: block; min-width: 0; width: 100%; } }
+      @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <main class="page series-page">
+      <header class="series-header">
+        <a class="series-brand" href="../" aria-label="Pani Rzecznik - strona główna">PANI <span>RZECZNIK.</span></a>
+        <a class="series-back" href="../">Wróć na stronę główną ↗</a>
+      </header>
+
+      <section class="card series-hero" aria-labelledby="series-title">
+        <div class="series-hero__copy">
+          <p class="label">Nowy cykl Pani Rzecznik</p>
+          <h1 id="series-title">Ekspertka<br /><span>w kadrze.</span></h1>
+          <p class="series-lead">Rozmowy z kobietami, które znają swój fach.</p>
+          <p class="series-intro">Co sprawia, że ktoś wybiera właśnie tę drogę? Jak wygląda jego praca od środka? Czego nauczyły go trudne decyzje? O to pytam moje rozmówczynie.</p>
+          <a class="btn" href="#o-cyklu">Poznaj cykl</a>
+        </div>
+        <div class="series-frame" aria-hidden="true">
+          <span class="series-frame__top">Pani Rzecznik przedstawia</span>
+          <span class="series-frame__middle">EKSPERTKA<br /><em>W KADRZE</em></span>
+          <span class="series-frame__bottom">ROZMOWY / HISTORIE / LUDZIE</span>
+        </div>
+      </section>
+
+      <section class="card series-section" id="o-cyklu">
+        <span class="series-kicker">O cyklu</span>
+        <h2>Za każdą specjalizacją stoi człowiek.</h2>
+        <p>Zapraszam przed kamerę ekspertki z różnych branż. Rozmawiamy o ich pracy, doświadczeniu, o tym, co je napędza, i o momentach, które coś zmieniły. Czasem będzie konkretnie i zawodowo. Czasem zejdziemy na zupełnie inny temat. Tak zwykle bywa w dobrej rozmowie.</p>
+        <p>Chciałabym, żeby po obejrzeniu wywiadu można było powiedzieć: teraz wiem, czym ona się zajmuje, ale przede wszystkim trochę ją poznałam.</p>
+      </section>
+
+      <section class="card series-section" id="jak-to-wyglada">
+        <span class="series-kicker">Od pomysłu do publikacji</span>
+        <h2>Jak wygląda udział?</h2>
+        <div class="series-steps">
+          <div class="series-step">
+            <span class="series-step__no">01 / PRZYGOTOWANIE</span>
+            <h3>Najpierw się poznajemy</h3>
+            <p>Rozmawiamy wcześniej o Tobie i Twojej pracy. Ustalamy tematy, które warto poruszyć. Nie musisz uczyć się odpowiedzi na pamięć.</p>
+          </div>
+          <div class="series-step">
+            <span class="series-step__no">02 / NAGRANIE</span>
+            <h3>Siadamy do rozmowy</h3>
+            <p>Ja pytam i dopytuję, Ty odpowiadasz własnymi słowami. O kamery, światło i dźwięk dba ekipa. Możemy nagrać wywiad w studiu lub innym ustalonym miejscu.</p>
+          </div>
+          <div class="series-step">
+            <span class="series-step__no">03 / MATERIAŁY</span>
+            <h3>Twoja historia idzie dalej</h3>
+            <p>Z rozmowy powstaje pełny film i krótsze fragmenty do mediów społecznościowych. Bohaterki cyklu przedstawiamy również na stronie Pani Rzecznik.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card series-section" id="dla-kogo">
+        <div class="series-about">
+          <div>
+            <span class="series-kicker">Kogo zapraszam?</span>
+            <h2>Nie trzeba być znaną, żeby mieć ciekawą historię.</h2>
+            <p>Lekarka, prawniczka, architektka, naukowczyni, właścicielka firmy, specjalistka od rzeczy, o których większość z nas wie niewiele. Branża jest drugorzędna. Szukam kobiet, które lubią to, co robią, mają własne zdanie i potrafią opowiedzieć o swojej drodze.</p>
+          </div>
+          <aside class="series-about__aside">
+            <strong>A jeśli kamera mnie stresuje?</strong>
+            <p>Możesz przyjść z tremą. Od tego jestem, żeby poprowadzić rozmowę i zadbać o atmosferę. Nie musisz mówić do obiektywu ani wygłaszać przygotowanej przemowy.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="card series-section" id="co-powstaje">
+        <span class="series-kicker">Po spotkaniu</span>
+        <h2>Jedna rozmowa. Kilka sposobów, żeby ją pokazać.</h2>
+        <div class="series-outcome">
+          <div><h3>Pełny wywiad</h3><p>Rozmowa, do której można wrócić i którą można pokazać klientom, partnerom czy współpracownikom.</p></div>
+          <div><h3>Krótkie filmy</h3><p>Wybrane fragmenty przygotowane do publikacji jako rolki i krótkie wideo.</p></div>
+          <div><h3>Prezentacja bohaterki</h3><p>Jej historia, specjalizacja i rozmowa w jednym miejscu, na stronie cyklu.</p></div>
+        </div>
+      </section>
+
+      <section class="card series-section series-contact" id="kontakt">
+        <span class="series-kicker">Do zobaczenia przed kamerą</span>
+        <h2>Może następną rozmowę nagramy z Tobą?</h2>
+        <p>Jeśli chciałabyś opowiedzieć o swojej pracy, napisz do mnie kilka zdań. Czym się zajmujesz? Co jest w Twojej historii warte opowiedzenia? Odpiszę i porozmawiamy o szczegółach.</p>
+        <a class="btn" href="mailto:info@panirzecznik.pl?subject=Ekspertka%20w%20kadrze%20-%20zg%C5%82oszenie">Napisz do mnie</a>
+        <p class="series-note">Anna Nowosielska / Pani Rzecznik</p>
+      </section>
+
+      <footer class="series-footer">
+        <span>© Pani Rzecznik</span>
+        <a href="../">Strona główna</a>
+      </footer>
+    </main>
+  </body>
+</html>
