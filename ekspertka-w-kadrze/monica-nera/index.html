@@ -1,160 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monica Nera | Ekspertka w kadrze - Pani Rzecznik</title>
-    <meta name="description" content="Monica Nera, projektantka mody i twórczyni marki odzieżowej, jest pierwszą bohaterką cyklu Ekspertka w kadrze. Poznaj jej historię." />
-    <link rel="canonical" href="https://panirzecznik.pl/ekspertka-w-kadrze/monica-nera/" />
-    <meta property="og:type" content="profile" />
-    <meta property="og:locale" content="pl_PL" />
-    <meta property="og:site_name" content="Pani Rzecznik" />
-    <meta property="og:title" content="Monica Nera | Ekspertka w kadrze" />
-    <meta property="og:description" content="Projektantka mody i twórczyni własnej marki. Pierwsza bohaterka cyklu rozmów Pani Rzecznik." />
-    <meta property="og:url" content="https://panirzecznik.pl/ekspertka-w-kadrze/monica-nera/" />
-    <meta name="theme-color" content="#f7f7f5" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../styles.css" />
-    <style>
-      .portrait-page { max-width: 960px; padding-top: 1.6rem; }
-      .portrait-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.7rem; padding: 0 .3rem; }
-      .portrait-logo { text-decoration: none; color: #181418; font-family: Manrope,Inter,sans-serif; font-weight: 800; letter-spacing: -.025em; }
-      .portrait-logo span { color: #ff4f9a; }
-      .portrait-nav a:last-child { font-size: .9rem; font-weight: 600; color: #6e5b68; text-decoration: none; }
-      .portrait-hero { text-align: center; padding: clamp(2.5rem, 8vw, 5.2rem) clamp(1.5rem, 7vw, 5rem) clamp(2rem, 5vw, 3.4rem); }
-      .portrait-hero .label { color: #ab356e; margin-bottom: 1.5rem; }
-      .portrait-hero .label::before { background: #ff4f9a; box-shadow: 0 0 0 4px #ffebf3; }
-      .portrait-hero h1 { font-size: clamp(3rem, 8vw, 5.7rem); letter-spacing: -.065em; line-height: 1.04; }
-      .portrait-meta { margin: 1.2rem auto 2.2rem; display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; color: #a13b6d; font-weight: 700; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; }
-      .portrait-deck { font-size: clamp(1.15rem, 2.4vw, 1.5rem); color: #3e363d; font-weight: 500; line-height: 1.6; max-width: 690px; margin: auto; }
-      .portrait-video { margin-top: 2.3rem; background: #1e1723; border-radius: 16px; aspect-ratio: 16/9; position: relative; display: grid; place-items: center; overflow: hidden; color: #fff; text-align: center; }
-      .portrait-video::before { content: ''; position: absolute; width: 80%; height: 170%; transform: rotate(34deg); background: linear-gradient(90deg,transparent,rgba(235,127,176,.18),transparent); }
-      .portrait-video::after { content: ''; position: absolute; inset: 1.5rem; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; pointer-events: none; }
-      .portrait-video__inner { z-index: 1; display: grid; gap: .45rem; justify-items: center; padding: 1.5rem; }
-      .portrait-video__eyebrow { color: #efa5ca; letter-spacing: .16em; font-weight: 700; font-size: .77rem; }
-      .portrait-video__headline { font-family: Manrope,Inter,sans-serif; font-size: clamp(1.6rem, 4vw, 3rem); letter-spacing: -.05em; font-weight: 800; line-height: 1.18; }
-      .portrait-video__note { font-size: .92rem; color: #ddcdd6; }
-      .portrait-caption { text-align: left; color: #807780; font-size: .83rem; margin-top: .9rem; }
-      .portrait-section { padding: clamp(2rem, 5.2vw, 3.6rem); text-align: left; margin-top: 1.5rem; }
-      .portrait-section__kicker { font-size: .75rem; font-weight: 800; letter-spacing: .12em; color: #ae3d74; text-transform: uppercase; display: block; margin-bottom: .9rem; }
-      .portrait-section h2 { text-align: left; font-size: clamp(1.65rem, 3.4vw, 2.4rem); margin-bottom: 1.3rem; }
-      .portrait-section p { color: #494149; line-height: 1.82; font-size: 1.04rem; }
-      .portrait-section p + p { margin-top: 1.2rem; }
-      .portrait-split { display: grid; grid-template-columns: minmax(220px, .65fr) 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); }
-      .portrait-monogram { display: grid; place-items: center; min-height: 260px; background: linear-gradient(145deg, #e6bad0 0%, #bd6c94 64%, #7d3b60 100%); border-radius: 16px; border: 1px solid #e7c4d6; color: #fff; font-size: clamp(5rem, 12vw, 7rem); letter-spacing: -.12em; font-family: Manrope,Inter,sans-serif; font-weight: 800; }
-      .portrait-links { display: flex; flex-wrap: wrap; gap: .85rem 1.3rem; margin-top: 1.7rem; }
-      .portrait-links a { color: #9a2e64; text-decoration: underline; text-decoration-color: #edc0d4; text-underline-offset: .2rem; font-size: .92rem; font-weight: 700; }
-      .portrait-interview { background: linear-gradient(150deg, #17121a, #241d28); color: #fff; }
-      .portrait-interview h2 { color: #fff; }
-      .portrait-interview > p { color: #ddced9; max-width: 640px; }
-      .portrait-interview__placeholder { aspect-ratio: 16/9; border: 1px dashed #765b6e; background: rgba(255,255,255,.035); border-radius: 16px; margin-top: 1.8rem; display: grid; place-items: center; text-align: center; padding: 2rem; }
-      .portrait-interview__placeholder span { display: block; color: #efbdd4; font-family: Manrope,Inter,sans-serif; font-size: clamp(1.1rem, 2.8vw, 1.7rem); font-weight: 700; }
-      .portrait-interview__placeholder small { color: #b9a8b5; font-size: .85rem; display: block; margin-top: .65rem; }
-      .portrait-reels__lead { max-width: 640px; }
-      .portrait-reels__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.15rem; margin-top: 1.7rem; }
-      .portrait-reel { min-width: 0; }
-      .portrait-reel__frame { aspect-ratio: 9 / 16; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 1.2rem; gap: .8rem; border: 1px solid #e8d6e0; border-radius: 15px; background: linear-gradient(150deg, #3b2636, #1c1620 75%); color: #fff; text-align: center; }
-      .portrait-reel__no { color: #f4add0; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; font-size: .7rem; }
-      .portrait-reel__title { font: 800 clamp(1.1rem, 2.2vw, 1.5rem)/1.2 Manrope, Inter, sans-serif; }
-      .portrait-reel__note { color: #d8c2d0; font-size: .8rem; }
-      .portrait-reel figcaption { color: #655960; font-size: .86rem; padding: .65rem .1rem 0; }
-      .portrait-follow { text-align: center; padding: 2.2rem; margin-top: 1.5rem; }
-      .portrait-follow p { color: #555056; }
-      .portrait-follow a { color: #a63268; font-weight: 700; text-decoration: none; }
-      .portrait-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.7rem; padding: .4rem; color: #807a80; font-size: .8rem; }
-      .portrait-footer a { color: #70666e; }
-      @media(max-width: 700px) { .portrait-split { grid-template-columns: 1fr; } .portrait-monogram { min-height: 210px; } .portrait-reels__grid { grid-auto-flow: column; grid-auto-columns: minmax(185px, 65%); grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .6rem; } .portrait-reel { scroll-snap-align: start; } }
-      @media(max-width: 480px) { .portrait-page { padding: 1rem .85rem 3rem; } .portrait-hero, .portrait-section { padding: 1.75rem 1.35rem; } .portrait-hero h1 { font-size: 3.15rem; } .portrait-meta { gap: .3rem; } .portrait-video { margin-top: 1.8rem; } .portrait-video::after { inset: .8rem; } }
-    </style>
-  </head>
-  <body>
-    <main class="page portrait-page">
-      <nav class="portrait-nav" aria-label="Nawigacja">
-        <a class="portrait-logo" href="../../">PANI <span>RZECZNIK.</span></a>
-        <a href="../">← Wszystkie ekspertki</a>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171716">
+  <meta name="description" content="Monica Nera. Pierwsza bohaterka cyklu wywiadów wideo Ekspertka w kadrze. Portret, zwiastun, rozmowa i krótkie formy.">
+  <title>Monica Nera | Ekspertka w kadrze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="person-page">
+  <a class="skip-link" href="#historia">Przejdź do treści</a>
+  <header class="site-header">
+    <a class="site-logo" href="../" aria-label="Pani Rzecznik, galeria">PANI<span>RZECZNIK</span><b>.</b></a>
+    <span class="site-header__middle">EKSPERTKA W KADRZE / ODCINEK 001</span>
+    <nav class="site-nav" aria-label="Nawigacja"><a href="../#archiwum">← GALERIA</a><a href="#rozmowa">WYWIAD ↓</a></nav>
+  </header>
+  <main>
+    <section class="person-cover" aria-labelledby="person-title">
+      <div class="person-cover__photo"><img src="https://supportherstory.com/cdn/shop/files/Monica_Nera.png?v=1710216622&amp;width=1600" alt="Monica Nera, fotografia referencyjna z HerStory"></div>
+      <div class="person-cover__header meta"><span>[ 001 / MODA + BIZNES ]</span><span>EKSPERTKA W KADRZE</span></div>
+      <div class="person-cover__title"><p>PORTRET PIERWSZY</p><h1 id="person-title">MONICA<br><span>NERA<span class="magenta-dot">.</span></span></h1><div class="person-cover__under"><span>PROJEKTANTKA / PRZEDSIĘBIORCZYNI</span><a href="#historia">POZNAJ HISTORIĘ ↓</a></div></div>
+      <div class="person-cover__credit">ZDJĘCIE REFERENCYJNE / HERSTORY</div>
+    </section>
 
-      <article>
-        <header class="card portrait-hero">
-          <p class="label">Ekspertka w kadrze / Bohaterka 01</p>
-          <h1>Monica Nera</h1>
-          <div class="portrait-meta"><span>Projektantka mody</span><span>·</span><span>Założycielka marki</span><span>·</span><span>Biznes</span></div>
-          <p class="portrait-deck">Od pomysłu na własną małą czarną we Włoszech do marki modowej, którą prowadzi z Warszawy i rozwija również za granicą.</p>
-          <div class="portrait-video" aria-label="Miejsce na trailer wywiadu z Monicą Nerą">
-            <div class="portrait-video__inner">
-              <span class="portrait-video__eyebrow">TRAILER ROZMOWY</span>
-              <span class="portrait-video__headline">Monica Nera<br />w kadrze</span>
-              <span class="portrait-video__note">Wideo pojawi się po nagraniu</span>
-            </div>
-          </div>
-          <p class="portrait-caption">Tutaj opublikujemy zwiastun rozmowy nagranej przez ekipę Pani Rzecznik.</p>
-        </header>
+    <section class="person-story paper-shell" id="historia" aria-labelledby="story-heading">
+      <div class="section-rule"><span class="meta">[ 01 / PORTRET ]</span><span class="meta">MONICA NERA</span></div>
+      <div class="person-story__grid"><div class="story-margin"><span class="story-issue">001</span><p>W świecie, w którym liczy się pierwszy efekt, nas interesuje także to, co dzieje się za kulisami.</p></div><div><h2 id="story-heading">ZA MARKĄ<br>STOI <em>CZŁOWIEK.</em></h2><p>Monica Nera projektuje ubrania i rozwija markę sygnowaną swoim nazwiskiem. Jej praca łączy tworzenie kolekcji z prowadzeniem firmy, podejmowaniem decyzji i codzienną współpracą z zespołem.</p><p>W pierwszej rozmowie chcemy zajrzeć właśnie za tę widoczną część biznesu. Porozmawiać o początkach, zawodowych wyborach, dobrych pomysłach i tych, które wymagały zmiany planu.</p><div class="person-story__links"><a href="https://www.instagram.com/monicanera/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a href="https://www.monicanera.com/" target="_blank" rel="noopener noreferrer">MARKA MONICA NERA ↗</a></div></div></div>
+    </section>
 
-        <section class="card portrait-section">
-          <span class="portrait-section__kicker">Poznaj bohaterkę</span>
-          <div class="portrait-split">
-            <div class="portrait-monogram" aria-label="Miejsce na portret bohaterki">MN</div>
-            <div>
-              <h2>Ubrania szyte na własnych zasadach</h2>
-              <p>Monica Nera jest projektantką mody i twórczynią marki odzieżowej noszącej jej imię. Pomysł na pierwsze projekty narodził się, gdy mieszkała na południu Włoch. Z czasem zbudowała własną firmę, w której stawia na naturalne tkaniny i szycie ubrań na zamówienie.</p>
-              <p>Jej pracownia działa w Warszawie. Marka jest obecna także poza Polską, a dużą rolę w jej rozwoju odegrały kontakty nawiązywane za pośrednictwem Instagrama.</p>
-              <p>Za kolekcjami stoją też codzienne decyzje o produkcji, pracy z ludźmi i prowadzeniu biznesu. To właśnie te kulisy chcemy poznać bliżej w pierwszej rozmowie cyklu.</p>
-              <div class="portrait-links">
-                <a href="https://www.instagram.com/monicanera/" target="_blank" rel="noopener noreferrer">Instagram @monicanera ↗</a>
-                <a href="https://www.monicanera.com/" target="_blank" rel="noopener noreferrer">Strona marki ↗</a>
-              </div>
-            </div>
-          </div>
-        </section>
+    <section class="screen-section" id="zwiastun" aria-labelledby="trailer-heading"><div class="screen-section__head"><span class="meta">[ 02 / ZWIASTUN ]</span><h2 id="trailer-heading">PIERWSZE<br><em>SEKUNDY.</em></h2><p>Krótka zapowiedź rozmowy. Pojawi się tu po realizacji nagrania.</p></div><div class="film-screen film-screen--trailer" role="img" aria-label="Zarezerwowane miejsce na zwiastun wywiadu z Monicą Nerą"><span class="screen-corner meta">EKSPERTKA W KADRZE / 001</span><span class="screen-main">TRAILER<br><i>W PRZYGOTOWANIU.</i></span><span class="screen-foot meta">MIEJSCE NA WIDEO / 16:9</span></div></section>
 
-        <section class="card portrait-section portrait-interview" id="pelna-rozmowa">
-          <span class="portrait-section__kicker">Ekspertka w kadrze / Odcinek 01</span>
-          <h2>Pełna rozmowa</h2>
-          <p>Po premierze będzie tu można obejrzeć cały wywiad wideo, który realizujemy z Monicą Nerą. Poniżej opublikujemy również rolki z naszego nagrania.</p>
-          <div class="portrait-interview__placeholder" aria-label="Miejsce na pełny wywiad">
-            <div><span>Wywiad w przygotowaniu</span><small>Miejsce na odtwarzacz pełnego odcinka</small></div>
-          </div>
-        </section>
-      </article>
+    <section class="interview paper-shell" id="rozmowa" aria-labelledby="interview-heading"><div class="section-rule"><span class="meta">[ 03 / PEŁNA ROZMOWA ]</span><span class="meta">WYWIAD WIDEO</span></div><div class="interview__head"><h2 id="interview-heading">CAŁA<br><em>ROZMOWA.</em></h2><p>Bez urywanych odpowiedzi. Po premierze w tym miejscu będzie można obejrzeć pełny wywiad z Monicą Nerą, zrealizowany przez naszą ekipę.</p></div><div class="film-screen film-screen--interview" role="img" aria-label="Zarezerwowane miejsce na pełny wywiad wideo"><span class="screen-corner meta">PANI RZECZNIK / WYWIAD 001</span><span class="screen-main">MONICA NERA<span class="screen-subline">PEŁNY ODCINEK W PRZYGOTOWANIU</span></span><span class="screen-foot meta">WIDEO / 16:9</span></div></section>
 
-      <section class="card portrait-section portrait-reels" id="rolki" aria-labelledby="rolki-title">
-        <span class="portrait-section__kicker">Z tej rozmowy</span>
-        <h2 id="rolki-title">Krótkie fragmenty</h2>
-        <p class="portrait-reels__lead">Po premierze znajdziesz tu rolki z wybranymi fragmentami wywiadu. Każda będzie prowadzić do naszej pełnej rozmowy z Monicą.</p>
-        <div class="portrait-reels__grid">
-          <figure class="portrait-reel">
-            <div class="portrait-reel__frame" aria-label="Miejsce na pierwszą rolkę">
-              <span class="portrait-reel__no">01 / ROLKA</span>
-              <span class="portrait-reel__title">Monica Nera</span>
-              <span class="portrait-reel__note">W przygotowaniu</span>
-            </div>
-            <figcaption>Fragment rozmowy 01</figcaption>
-          </figure>
-          <figure class="portrait-reel">
-            <div class="portrait-reel__frame" aria-label="Miejsce na drugą rolkę">
-              <span class="portrait-reel__no">02 / ROLKA</span>
-              <span class="portrait-reel__title">Monica Nera</span>
-              <span class="portrait-reel__note">W przygotowaniu</span>
-            </div>
-            <figcaption>Fragment rozmowy 02</figcaption>
-          </figure>
-          <figure class="portrait-reel">
-            <div class="portrait-reel__frame" aria-label="Miejsce na trzecią rolkę">
-              <span class="portrait-reel__no">03 / ROLKA</span>
-              <span class="portrait-reel__title">Monica Nera</span>
-              <span class="portrait-reel__note">W przygotowaniu</span>
-            </div>
-            <figcaption>Fragment rozmowy 03</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="card portrait-follow">
-        <p>Chcesz poznać kolejne bohaterki? <a href="../#bohaterki">Wróć do galerii ekspertek ↗</a></p>
-      </section>
-      <footer class="portrait-footer"><span>© Pani Rzecznik</span><a href="../../">Strona główna</a></footer>
-    </main>
-  </body>
+    <section class="fragments" aria-labelledby="fragments-heading"><div class="section-rule"><span class="meta">[ 04 / FRAGMENTY ]</span><span class="meta">KRÓTKIE FORMY WIDEO</span></div><div class="fragments__head"><h2 id="fragments-heading">WYBRANE<br><em>MOMENTY.</em></h2><p>Najciekawsze fragmenty rozmowy wrócą tu w krótkich formach. Także tych publikowanych na Instagramie i Facebooku.</p></div><div class="fragment-filmstrip"><div class="fragment-frame"><span>REEL / 01</span><b>01</b><small>W PRZYGOTOWANIU</small></div><div class="fragment-frame"><span>REEL / 02</span><b>02</b><small>W PRZYGOTOWANIU</small></div><div class="fragment-frame"><span>REEL / 03</span><b>03</b><small>W PRZYGOTOWANIU</small></div></div><a class="back-to-gallery" href="../#archiwum">← WRÓĆ DO GALERII</a></section>
+  </main>
+  <footer class="site-footer"><span>PANI RZECZNIK <b>●</b> EKSPERTKA W KADRZE</span><span>MONICA NERA / 001</span><a href="../">WSZYSTKIE BOHATERKI ↑</a></footer>
+</body>
 </html>
