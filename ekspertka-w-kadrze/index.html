@@ -52,6 +52,22 @@
       .series-step__no { color: #c74a84; font-size: .8rem; font-weight: 800; letter-spacing: .08em; }
       .series-step h3 { font-family: Manrope, Inter, sans-serif; font-size: 1.04rem; line-height: 1.35; margin: .85rem 0 .6rem; }
       .series-step p { font-size: .92rem; line-height: 1.65; color: #4e474b; }
+      .guest-gallery { display: grid; gap: 1.4rem; }
+      .guest-gallery__header { display: flex; align-items: end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+      .guest-gallery__header h2 { margin: 0; }
+      .guest-gallery__count { font-size: .77rem; letter-spacing: .08em; color: #8b7f86; font-weight: 700; }
+      .guest-card { display: grid; grid-template-columns: .78fr 1.22fr; overflow: hidden; border: 1px solid #efdee7; border-radius: 19px; background: #fdfbfc; text-decoration: none; color: inherit; transition: transform 180ms ease, border-color 180ms ease; }
+      .guest-card:hover { transform: translateY(-3px); border-color: #e99abe; }
+      .guest-card__visual { position: relative; display: grid; place-items: center; min-height: 270px; background: linear-gradient(140deg, #e7bbce, #ad6b90 65%, #6f3554); color: #fff; overflow: hidden; }
+      .guest-card__visual::before { content: ''; position: absolute; inset: 1.1rem; border: 1px solid rgba(255,255,255,.5); }
+      .guest-card__visual::after { content: ''; position: absolute; width: 130%; height: 1px; transform: rotate(-42deg); background: rgba(255,255,255,.23); }
+      .guest-card__monogram { position: relative; z-index: 1; font-family: Manrope,Inter,sans-serif; font-weight: 800; font-size: 5.1rem; letter-spacing: -.1em; }
+      .guest-card__info { padding: 2rem 2.15rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+      .guest-card__tag { font-size: .73rem; color: #a73b73; text-transform: uppercase; font-weight: 800; letter-spacing: .09em; margin-bottom: .85rem; }
+      .guest-card__info h3 { font-family: Manrope,Inter,sans-serif; font-size: clamp(1.65rem, 3.5vw, 2.2rem); line-height: 1.15; letter-spacing: -.045em; margin: 0 0 .9rem; }
+      .guest-card__info p { font-size: .96rem; line-height: 1.7; color: #51464d; }
+      .guest-card__action { color: #8f3262; font-weight: 700; font-size: .93rem; margin-top: 1.3rem; }
+      .guest-gallery__hint { color: #776e73 !important; font-size: .9rem; }
       .series-about { display: grid; grid-template-columns: 1fr 1fr; gap: 2.7rem; align-items: start; }
       .series-about__aside { background: #f8f5f6; padding: 1.6rem; border-left: 3px solid #ff4f9a; border-radius: 0 12px 12px 0; }
       .series-about__aside strong { display: block; margin-bottom: .7rem; font-size: .95rem; }
@@ -68,7 +84,7 @@
       .series-note { font-size: .8rem; color: #c9b9c3 !important; margin-top: .65rem !important; }
       .series-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 1.6rem .3rem 0; color: #79747a; font-size: .8rem; }
       .series-footer a { color: #615762; }
-      @media(max-width: 720px) { .series-hero { grid-template-columns: 1fr; } .series-frame { min-height: 250px; } .series-steps, .series-outcome { grid-template-columns: 1fr; } .series-about { grid-template-columns: 1fr; gap: 1.4rem; } }
+      @media(max-width: 720px) { .series-hero { grid-template-columns: 1fr; } .series-frame { min-height: 250px; } .series-steps, .series-outcome { grid-template-columns: 1fr; } .series-about { grid-template-columns: 1fr; gap: 1.4rem; } .guest-card { grid-template-columns: 1fr; } .guest-card__visual { min-height: 240px; } }
       @media(max-width: 480px) { .series-page { padding: 1rem .8rem 3rem; } .series-header { padding: 0 .25rem 1rem; } .series-back { font-size: .76rem; } .series-hero, .series-section { padding: 1.65rem 1.3rem; } .series-hero h1 { font-size: 2.9rem; } .series-frame__middle { font-size: 2.8rem; } .series-contact a.btn { display: block; min-width: 0; width: 100%; } }
       @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
@@ -85,14 +101,34 @@
           <p class="label">Nowy cykl Pani Rzecznik</p>
           <h1 id="series-title">Ekspertka<br /><span>w kadrze.</span></h1>
           <p class="series-lead">Rozmowy z kobietami, które znają swój fach.</p>
-          <p class="series-intro">Co sprawia, że ktoś wybiera właśnie tę drogę? Jak wygląda jego praca od środka? Czego nauczyły go trudne decyzje? O to pytam moje rozmówczynie.</p>
-          <a class="btn" href="#o-cyklu">Poznaj cykl</a>
+          <p class="series-intro">Skąd pomysł na taką drogę? Jak wygląda jej praca od środka? Czego nauczyły ją trudne decyzje? O to pytam moje rozmówczynie.</p>
+          <a class="btn" href="#bohaterki">Poznaj bohaterki</a>
         </div>
         <div class="series-frame" aria-hidden="true">
           <span class="series-frame__top">Pani Rzecznik przedstawia</span>
           <span class="series-frame__middle">EKSPERTKA<br /><em>W KADRZE</em></span>
           <span class="series-frame__bottom">ROZMOWY / HISTORIE / LUDZIE</span>
         </div>
+      </section>
+
+      <section class="card series-section guest-gallery" id="bohaterki">
+        <div class="guest-gallery__header">
+          <div>
+            <span class="series-kicker">Ludzie i ich historie</span>
+            <h2>Poznaj ekspertki</h2>
+          </div>
+          <span class="guest-gallery__count">01 / PIERWSZA BOHATERKA</span>
+        </div>
+        <a class="guest-card" href="./monica-nera/" aria-label="Poznaj Monicę Nerę">
+          <div class="guest-card__visual" aria-hidden="true"><span class="guest-card__monogram">MN</span></div>
+          <div class="guest-card__info">
+            <span class="guest-card__tag">Moda · Biznes · W przygotowaniu</span>
+            <h3>Monica Nera</h3>
+            <p>Projektantka i twórczyni marki odzieżowej Monica Nera. Jej historia zaczęła się od fascynacji włoską modą, a dziś łączy projektowanie z prowadzeniem własnego biznesu.</p>
+            <span class="guest-card__action">Poznaj Monicę ↗</span>
+          </div>
+        </a>
+        <p class="guest-gallery__hint">Wraz z kolejnymi rozmowami galeria będzie się rozrastać. Docelowo będzie można przeglądać bohaterki również według dziedzin.</p>
       </section>
 
       <section class="card series-section" id="o-cyklu">
@@ -114,12 +150,12 @@
           <div class="series-step">
             <span class="series-step__no">02 / NAGRANIE</span>
             <h3>Siadamy do rozmowy</h3>
-            <p>Ja pytam i dopytuję, Ty odpowiadasz własnymi słowami. O kamery, światło i dźwięk dba ekipa. Możemy nagrać wywiad w studiu lub innym ustalonym miejscu.</p>
+            <p>Ja pytam i dopytuję, Ty odpowiadasz własnymi słowami. Nasza ekipa odpowiada za kamery, światło i dźwięk. Nagrywamy w studiu lub innym ustalonym miejscu.</p>
           </div>
           <div class="series-step">
             <span class="series-step__no">03 / MATERIAŁY</span>
             <h3>Twoja historia idzie dalej</h3>
-            <p>Z rozmowy powstaje pełny film i krótsze fragmenty do mediów społecznościowych. Bohaterki cyklu przedstawiamy również na stronie Pani Rzecznik.</p>
+            <p>Montujemy pełny wywiad, zwiastun i krótsze fragmenty do mediów społecznościowych. Każda bohaterka dostaje też własne miejsce na stronie cyklu.</p>
           </div>
         </div>
       </section>
@@ -142,8 +178,8 @@
         <span class="series-kicker">Po spotkaniu</span>
         <h2>Jedna rozmowa. Kilka sposobów, żeby ją pokazać.</h2>
         <div class="series-outcome">
-          <div><h3>Pełny wywiad</h3><p>Rozmowa, do której można wrócić i którą można pokazać klientom, partnerom czy współpracownikom.</p></div>
-          <div><h3>Krótkie filmy</h3><p>Wybrane fragmenty przygotowane do publikacji jako rolki i krótkie wideo.</p></div>
+          <div><h3>Pełny wywiad wideo</h3><p>Nagrany i zmontowany przez naszą ekipę. Rozmowa, do której można wrócić i którą można pokazać klientom czy współpracownikom.</p></div>
+          <div><h3>Trailer i rolki</h3><p>Z naszego nagrania wybieramy fragmenty, które sprawdzą się jako zwiastun, rolki i krótkie wideo.</p></div>
           <div><h3>Prezentacja bohaterki</h3><p>Jej historia, specjalizacja i rozmowa w jednym miejscu, na stronie cyklu.</p></div>
         </div>
       </section>

@@ -20,5 +20,6 @@ jobs:
           password: ${{ secrets.DHOST_FTP_PASS }}
           server-dir: ${{ secrets.DHOST_FTP_PATH }}
           port: 21
+          protocol: ftps
           timeout: 300000
           dangerous-clean-slate: false
