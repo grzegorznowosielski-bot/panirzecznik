@@ -15,7 +15,7 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ${{ secrets.DHOST_FTP_HOST }}
+          server: ostudios.ftp.dhosting.pl
           username: ${{ secrets.DHOST_FTP_USER }}
           password: ${{ secrets.DHOST_FTP_PASS }}
           server-dir: ${{ secrets.DHOST_FTP_PATH }}
