@@ -141,3 +141,78 @@ button,a{transition:background .18s,color .18s,border-color .18s}
 .project-note__link:hover{color:#ff2d8a;border-color:#ff2d8a}
 .project-note__link:hover span{transform:translate(3px,-3px)}
 @media(max-width:650px){.project-note{padding:44px 20px}.project-note__content{align-items:start}.project-note h2{font-size:clamp(41px,10vw,65px)}.project-note__link{white-space:normal;line-height:1.35}}
+
+/* Mobile layout: czytelny nagłówek i hero bez nakładania tekstu na portret. */
+@media (max-width:700px) {
+  html { scroll-padding-top: 20px; }
+  .new-header {
+    position:relative;
+    display:block;
+    min-height:0;
+    padding:18px 18px 16px;
+  }
+  .new-logo {display:inline-block;font-size:25px;line-height:1.1;padding:8px 0;}
+  .new-header nav {
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    margin-top:23px;
+    padding:0;
+  }
+  .new-header nav a {font-size:10px;letter-spacing:0;white-space:nowrap;}
+  .new-header nav button {
+    position:absolute;
+    top:14px;right:18px;
+    padding:11px 12px;
+    font-size:10px;
+    white-space:nowrap;
+  }
+  .hero {padding:24px 18px 52px;}
+  .eyebrow {display:block;font-size:10px;line-height:1.5;margin-bottom:24px;}
+  .eyebrow span {display:block;}
+  .eyebrow span+span {margin-top:7px;}
+  .hero-brand {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:24px;
+    padding:0;
+    min-height:0;
+  }
+  .hero-brand-text {
+    position:static;
+    z-index:auto;
+    width:100%;
+    font-size:clamp(62px,18.2vw,114px);
+    line-height:.91;
+    white-space:normal;
+    overflow-wrap:normal;
+    letter-spacing:-.02em;
+  }
+  .hero-brand figure {
+    position:relative;
+    top:auto;right:auto;
+    transform:none;
+    opacity:1;
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:4/4.5;
+    overflow:hidden;
+    margin:0;
+    z-index:auto;
+  }
+  .hero-brand figure img {object-position:center 22%;}
+  .hero-brand figcaption {font-size:9px;padding:9px 11px;}
+  .hero>.label {margin:25px 0 10px;max-width:100%;line-height:1.5;}
+  .hero h1 {font-size:clamp(34px,8.7vw,56px);line-height:1.04;margin:25px 0 20px;overflow-wrap:break-word;}
+  .hero-brand figure {animation:none!important;}
+}
+@media (max-width:380px) {
+  .new-logo{font-size:22px}
+  .new-header nav a{font-size:9px}
+  .new-header nav button{padding:10px 9px;font-size:9px}
+  .hero-brand-text{font-size:18vw}
+}
