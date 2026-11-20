@@ -38,11 +38,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./redesign.css" />
   </head>
   <body>
+    <header class="new-header">
+      <a class="new-logo" href="#start">PANI RZECZNIK<span>.</span></a>
+      <nav aria-label="Nawigacja główna"><a href="#start">GŁÓWNA</a><a href="#mechanism">METODA</a><a href="#offer">REALIZACJA</a><a href="#authority">O MNIE</a><button data-open-form>KONSULTACJA</button></nav>
+    </header>
     <noscript> <img height="1" width="1" src="https://www.facebook.com/tr?id=1729986881040738&ev=PageView&noscript=1"/></noscript>
     <main class="page">
       <section class="hero card fade-in" id="start">
+        <div class="eyebrow"><span>ANNA NOWOSIELSKA / PANI RZECZNIK</span><span>ROZMOWA / WIZERUNEK / WIDEO</span></div>
+        <div class="hero-brand"><div class="hero-brand-text">TWOJA<br><i>MARKA</i><br>MA GŁOS<span>.</span></div><figure><img src="./anna-nowosielska.webp" alt="Anna Nowosielska z mikrofonem" width="800" height="1067"><figcaption>ANNA NOWOSIELSKA / PANI RZECZNIK</figcaption></figure></div>
         <p class="label">Dla ekspertek, które chcą swobodnie mówić przed kamerą</p>
         <h1>
           Nie musisz dłużej zmuszać się do „występów”, żeby budować swoją markę w
@@ -57,19 +64,29 @@
           zaczniesz mówić naturalnie i tworzyć treści, które naprawdę oddają to,
           kim jesteś jako ekspertka.
         </p>
+      </section>
+
+      <section class="video-section" id="film">
+        <div class="section-tag"><span>[ FILM / PANI RZECZNIK ]</span><span>JAK WYGLĄDA PRACA PRZED KAMERĄ</span></div>
         <div class="video-wrap">
-          <video autoplay muted playsinline controls preload="metadata">
-            <source src="./video/hero.mp4" type="video/mp4" />
-            Twoja przeglądarka nie obsługuje odtwarzania video.
-          </video>
+          <div class="video-editorial">
+            <p class="video-index">POZNAJ MOJĄ METODĘ</p>
+            <p class="video-headline">ZACZNIJMY<br />OD <span>ROZMOWY.</span></p>
+            <p class="video-note">Zobacz, jak pytania pomagają uporządkować myśli i mówić swobodnie o tym, co naprawdę ważne dla Twojej marki.</p>
+            <button class="video-cta" data-open-form>UMÓW BEZPŁATNĄ KONSULTACJĘ</button>
+          </div>
+          <div class="video-portrait">
+            <video autoplay muted playsinline controls preload="metadata">
+              <source src="https://panirzecznik.pl/video/hero.mp4" type="video/mp4" />
+              Twoja przeglądarka nie obsługuje odtwarzania video.
+            </video>
+          </div>
         </div>
-        <button class="btn" data-open-form>Zgłoś się na bezpłatną konsultację</button>
-        <p class="trust-text">
-          Bez presji. Najpierw sprawdzimy, czy to rozwiązanie dla Ciebie.
-        </p>
+        <p class="video-footnote">BEZ PRESJI. NAJPIERW SPRAWDZIMY, CZY TO ROZWIĄZANIE DLA CIEBIE.</p>
       </section>
 
       <section class="card content-section fade-in" id="problem">
+        <div class="section-tag">[ 01 / ZNASZ TO? ]</div>
         <h2>Masz wiedzę i doświadczenie, a mimo to… coś się blokuje?</h2>
         <p>
           Włączasz kamerę i pojawia się napięcie.<br />Pustka w głowie.<br />Poczucie,
@@ -82,6 +99,7 @@
       </section>
 
       <section class="card content-section fade-in" id="insight">
+        <div class="section-tag">[ 02 / PERSPEKTYWA ]</div>
         <h2>To nie jest problem wiedzy, lecz formy.</h2>
         <p>
           Kiedy stajesz sama przed kamerą, pojawia się presja.<br />Myśli się
@@ -94,6 +112,7 @@
       </section>
 
       <section class="card content-section fade-in" id="mechanism">
+        <div class="section-tag">[ 03 / METODA ]</div>
         <h2>Nie uczę Cię mówić do kamery. Ze mną wchodzisz w rozmowę.</h2>
         <p>
           Zamiast stawiać Cię samą przed „pustym” obiektywem, prowadzę Cię przez
@@ -104,6 +123,7 @@
       </section>
 
       <section class="card content-section fade-in" id="offer">
+        <div class="section-tag">[ 04 / REALIZACJA ]</div>
         <h2>Nie zostajesz sama z technikaliami. To ja ogarniam całą produkcję.</h2>
         <p>Spotykamy się w studio albo u Ciebie.</p>
         <p>
@@ -117,6 +137,7 @@
       </section>
 
       <section class="card content-section fade-in" id="result">
+        <div class="section-tag">[ 05 / EFEKT ]</div>
         <h2>Z jednego nagrania masz content na tygodnie</h2>
         <p>Po nagraniu otrzymujesz:</p>
         <ul class="bullet-list">
@@ -135,6 +156,7 @@
       </section>
 
       <section class="card content-section fade-in" id="authority">
+        <div class="section-tag">[ 06 / ANNA NOWOSIELSKA ]</div>
         <h2>Od lat pracuję z ludźmi przed kamerą i wiem, co działa</h2>
         <p>Od blisko 20 lat pracuję z kamerą i mikrofonem.</p>
         <p>
@@ -148,6 +170,7 @@
       </section>
 
       <section class="card content-section content-section--dark fade-in" id="final-cta">
+        <div class="section-tag">[ 08 / KONTAKT ]</div>
         <h2>Sprawdź, czy to rozwiązanie jest dla Ciebie</h2>
         <p>
           Wypełnij krótki formularz i zobaczymy, czy ten format pracy pasuje do
@@ -158,7 +181,12 @@
           Zgłoś się na bezpłatną konsultację
         </button>
       </section>
+      <aside class="project-note" id="program" aria-label="Powiązany projekt Anny Nowosielskiej">
+        <div class="project-note__eyebrow">POZNAJ TEŻ MÓJ AUTORSKI PROJEKT</div>
+        <div class="project-note__content"><div><h2>Ekspertka <span>w kadrze.</span></h2><p>Rozmowy i portrety kobiet, które mają coś ważnego do powiedzenia. Poznaj bohaterki i ich historie na osobnej stronie projektu.</p></div><a href="https://ekspertkawkadrze.pl/" target="_blank" rel="noopener" class="project-note__link">ODWIEDŹ STRONĘ PROJEKTU <span aria-hidden="true">↗</span></a></div>
+      </aside>
     </main>
+    <footer class="new-footer"><div><a href="#start">PANI RZECZNIK<span>.</span></a><a href="https://ekspertkawkadrze.pl/" target="_blank" rel="noopener">EKSPERTKA W KADRZE</a><a href="https://www.instagram.com/panirzecznik/" target="_blank" rel="noopener">INSTAGRAM</a><a href="https://www.tiktok.com/@panirzecznik" target="_blank" rel="noopener">TIKTOK</a><a href="https://www.youtube.com/@PaniRzecznik" target="_blank" rel="noopener">YOUTUBE</a><a href="#start">DO GÓRY ↑</a></div><p aria-hidden="true">PANI RZECZNIK<span>.</span></p><small>ANNA NOWOSIELSKA / PANI RZECZNIK © 2026</small></footer>
 
     <section class="form-modal" id="consultation-form" aria-hidden="true">
       <div class="form-modal__backdrop" data-close-form></div>
